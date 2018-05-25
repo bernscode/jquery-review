@@ -22,6 +22,7 @@ gulp.task('default', ['styles', 'scripts', 'browser-sync'], () => {
   gulp.watch('./src/**/*', ['scripts']).on('change', reload);
   gulp.watch('./public/*.html')
     .on('change', reload);
+  gulp.watch('./public/js/**/*').on('change', reload)
 });
 
 
