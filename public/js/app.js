@@ -1,31 +1,19 @@
 $(function(){
-  $('.box1 a').on('click', function(event){
-    event.preventDefault()
-    $('.box3').css({
-      background: 'purple'
-    })
+  $('.selectoptions').change(function(){
+    alert('Changed Value')
   })
 
-  $('.box2').on('click', function(){
-    $('.box3').css({
-      background: 'red'
+
+  $('.myname').change(function(event){
+    $('.box1').html('<h1>' + event.target.value + '</h1>')
+  }).focusin(function(){
+    $('.box2').css({
+      background: 'blue'
     })
-  })
-
-  $('.button').on('click', function(event){
-    event.stopPropagation()
-    if(event.target.nodeName == 'DIV') {
-      console.log(event.target.nodeName)
-      $('.box3').css({
-        background: 'purple'
-      })
-    } else {
-      console.log(event.target.nodeName)
-      $('.box3').css({
-        background: 'yellow'
-      })
-    }
-
+  }).focusout(function(){
+    $('.box2').css({
+      background: 'green'
+    })
   })
 });
 
