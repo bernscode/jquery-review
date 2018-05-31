@@ -1,12 +1,22 @@
 $(function(){
-  $('.box1').css({background: 'blue'})
+  $(window).resize(function() {
 
-  $('#last').css({background: 'black', padding: '20px'})
+    if($(window).width() > 1000){
+      $('body').css({
+        background: 'red'
+      })
+    }else if ($(window).width() > 700) {
+      $('body').css({
+        background: 'blue'
+      })
+    }else {
+      $('body').css({
+        background: 'yellow'
+      })
+    }
 
-  $('#last p').css({background: 'red'}).fadeOut('slow', function(){
-    console.log('hey it finished!')
   })
-})
+});
 
 
 
