@@ -1,25 +1,32 @@
 $(function(){
-  $(document).on('click', '.box1', function(){
-    $('body').css({
+  $('.box1 a').on('click', function(event){
+    event.preventDefault()
+    $('.box3').css({
+      background: 'purple'
+    })
+  })
+
+  $('.box2').on('click', function(){
+    $('.box3').css({
       background: 'red'
     })
   })
 
-  $( ".box2" ).on({
-    click: function() {
-      $('body').css({
-      background: 'purple'
+  $('.button').on('click', function(event){
+    event.stopPropagation()
+    if(event.target.nodeName == 'DIV') {
+      console.log(event.target.nodeName)
+      $('.box3').css({
+        background: 'purple'
       })
-    }, mouseenter: function() {
-      $('body').css({
-      background: 'yellow'
-      })
-    }, mouseleave: function() {
-      $('body').css({
-      background: 'red'
+    } else {
+      console.log(event.target.nodeName)
+      $('.box3').css({
+        background: 'yellow'
       })
     }
-  });
+
+  })
 });
 
 

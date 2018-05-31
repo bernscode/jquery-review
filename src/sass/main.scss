@@ -5,3 +5,29 @@
 // body{
 //   background: limegreen;
 // }
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.box {
+  height: 200px;
+  width: 33%;
+  padding: 20px;
+  display: inline-block;
+  margin: 50px 0;
+  background: #ccc;
+  vertical-align: top;
+}
+
+
+.button {
+  background: black;
+  padding: 15px;
+  display: inline-block;
+  color: white;
+}
