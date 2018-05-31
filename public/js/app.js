@@ -1,21 +1,25 @@
 $(function(){
-  $(window).resize(function() {
+  $(document).on('click', '.box1', function(){
+    $('body').css({
+      background: 'red'
+    })
+  })
 
-    if($(window).width() > 1000){
+  $( ".box2" ).on({
+    click: function() {
       $('body').css({
-        background: 'red'
+      background: 'purple'
       })
-    }else if ($(window).width() > 700) {
+    }, mouseenter: function() {
       $('body').css({
-        background: 'blue'
+      background: 'yellow'
       })
-    }else {
+    }, mouseleave: function() {
       $('body').css({
-        background: 'yellow'
+      background: 'red'
       })
     }
-
-  })
+  });
 });
 
 
