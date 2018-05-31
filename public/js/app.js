@@ -1,18 +1,18 @@
 $(function(){
-  $('.selectoptions').change(function(){
-    alert('Changed Value')
+  $('.button1').on('click',function(){
+    console.log('bernscode')
+  })
+
+  $('.button2').hover(function(){
+    for(i = 1; i <= 25; i++) {
+      console.log(i);
+    }
   })
 
 
-  $('.myname').change(function(event){
-    $('.box1').html('<h1>' + event.target.value + '</h1>')
-  }).focusin(function(){
-    $('.box2').css({
-      background: 'blue'
-    })
-  }).focusout(function(){
-    $('.box2').css({
-      background: 'green'
+  $('.square').mouseenter(function(){
+    $(this).css({
+      background: 'red'
     })
   })
 });
