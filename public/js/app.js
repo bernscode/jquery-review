@@ -1,5 +1,5 @@
 $(function(){
-  $('.button').addClass('active')
+  $('p').addClass('active')
 });
 
 
