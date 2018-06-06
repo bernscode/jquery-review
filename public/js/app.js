@@ -1,7 +1,9 @@
 $(function(){
 
   $('.button').on('click', function(){
-    $('div').remove('.box')
+    // $('<div class="active"> NEW ACTIVE Box </div>').replaceAll('.box')
+
+    $('.box').replaceWith('<div class="active"> NEW ACTIVE Box </div>')
 
   })
 
