@@ -1,11 +1,19 @@
 $(function(){
 
   $('.button').on('click', function(){
-    // $('<div class="active"> NEW ACTIVE Box </div>').replaceAll('.box')
 
-    $('.box').replaceWith('<div class="active"> NEW ACTIVE Box </div>')
-
+    console.log($('.box1 input.username').val())
   })
+
+
+
+  $('.box3').on('click', function(){
+
+    $('.box3 img').removeAttr('alt')
+  })
+
+
+
 
 
 });
