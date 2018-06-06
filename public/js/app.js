@@ -1,29 +1,22 @@
 $(function(){
 
-  console.log($('.box1').children())
 
-  $('.box1').children().css({
-    background: 'blue',
-    display: 'inline-block',
-    padding: '20px',
-    margin: '20px',
-    color: 'white'
+  $('.btn').on('click', function(){
+    var request = $.ajax({
+      url: "https://jsonplaceholder.typicode.com/posts",
+      method: "GET",
+      // data: { id : menuId },
+      // dataType: "html"
+    });
+
+    request.done(function( data ) {
+      console.log(data)
+    });
+
+    request.fail(function( jqXHR, textStatus, error) {
+      alert( "Request failed: " + textStatus + ' ' + error);
+    });
   })
-
-
-  $('p').each(function(){
-    console.log(this)
-
-    $(this).css({
-      background: 'yellow'
-    })
-  })
-
-
-  $('ul li').first().css({
-    background: 'green'
-  })
-
 
 });
 
