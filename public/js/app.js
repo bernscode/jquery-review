@@ -1,20 +1,18 @@
 $(function(){
 
-  $('.button').on('click', function(){
+  console.log($('.box2').width())
 
-    console.log($('.box1 input.username').val())
+  if ($('.box2').width() > 500) {
+    $('.box2').css({
+      background: 'red'
+    })
+  }
+
+
+  $('.box2').css({
+    paddingLeft: '50px',
+    
   })
-
-
-
-  $('.box3').on('click', function(){
-
-    $('.box3 img').removeAttr('alt')
-  })
-
-
-
-
 
 });
 
