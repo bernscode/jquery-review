@@ -1,12 +1,11 @@
 $(function(){
 
   $('.button').on('click', function(){
-    $('.box1').wrapInner('<div class="active"></div>')
+    console.log($('.firstP:first').text())
+    $('.firstP:first').text('The new Joe Text')
+
   })
 
-  $('.box3').on('click', function(){
-    $('.box1').unwrap('.active')
-  })
 
 });
 
