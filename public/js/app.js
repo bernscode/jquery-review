@@ -1,8 +1,9 @@
 $(function(){
 
   $('.button').on('click', function(){
-    console.log($('.firstP:first').text())
-    $('.firstP:first').text('The new Joe Text')
+    $('.firstP:first').before('<p>NEW MESSAGE</p>')
+
+    $('<p>NEW MESSAGE</p>').insertAfter('.firstP:first')
 
   })
 
