@@ -26,6 +26,8 @@ body {
   background: $mainRed;
   margin: 50px auto;
   overflow: auto;
+  overflow: hidden;
+  position: relative;
 
   border: 10px solid $darkRed;
   border-radius: 10px;
@@ -48,7 +50,7 @@ body {
     margin: 25px 0;
     color: #fff;
     letter-spacing: 2px;
-    text-transform: capitalize;
+    // text-transform: capitalize;
     min-height: 25px;
   }
 
@@ -73,6 +75,25 @@ body {
     letter-spacing: 3px;
     border-radius: 5px;
 
+  }
+  .loading-container {
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    display: none;
+    &.active {
+      display: flex;
+    }
+    h1 {
+      color: $blue;
+      font-weight: 300;
+    }
   }
 }
 
