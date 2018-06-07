@@ -1,60 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,700');
 @import 'reset';
 
+$mainRed: #DD1638;
+$darkRed: #8D0E28;
+$blue: #27A4F4;
+$grey: #DEDEDE;
+$green: #4EA459;
 
 
-// body{
-//   background: limegreen;
-// }
-
+body {
+  font-family: 'Roboto', sans-serif;
+  background: $darkRed;
+}
 
 
 * {
   box-sizing: border-box;
 }
 
+.pokedex {
+  display: block;
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  background: $mainRed;
+  margin: 50px auto;
+  overflow: auto;
 
+  h1 {
+    display: block;
+    font-weight: 100;
+    font-size: 3rem;
+    text-align: center;
+    margin: 25px 0;
+    color: #fff;
+    letter-spacing: 2px;
+  }
+  form {
+    text-align: center;
+  }
+  input[type="text"]{
+    font-size: 2rem;
+    margin: 25px auto;
+    display: block;
+    border-radius: 5px;
+    border: 1px solid $grey;
+    text-align: center;
+  }
+  .btn {
+    display: inline-block;
+    padding: 20px;
+    background: $green;
+    font-weight: 300;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 3px;
+    border-radius: 5px;
 
-.box {
-  height: 200px;
-  width: 33%;
-  padding: 20px;
-  display: inline-block;
-  margin: 50px 0;
-  background: #ccc;
-  vertical-align: top;
+  }
 }
 
 
-.button {
-  background: black;
-  padding: 15px;
-  display: inline-block;
-  color: white;
+.poke-img {
+  width: 150px;
+  height: 150px;
+  border: 5px solid $grey;
+  display: block;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 5px;
+
+  img {
+    width: 100%;
+  }
 }
 
 
 
-.box1 {
-  background: grey;
-  height: 200px;
-  width: 200px;
-}
-
-
-.box2 {
-  background: yellow;
-  height: 200px;
-  width: 200px;
-}
-
-.active {
-  display: block !important;
-}
 
 
 
-.btn {
-  background: grey;
-  height: 20px;
-  width: 100px;
-}
+
+
+
+
+
+// END
