@@ -10,7 +10,7 @@ $green: #4EA459;
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: $darkRed;
+  background: $grey;
 }
 
 
@@ -27,6 +27,9 @@ body {
   margin: 50px auto;
   overflow: auto;
 
+  border: 10px solid $darkRed;
+  border-radius: 10px;
+
   h1 {
     display: block;
     font-weight: 100;
@@ -36,6 +39,19 @@ body {
     color: #fff;
     letter-spacing: 2px;
   }
+
+  h3 {
+    display: block;
+    font-weight: 300;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 25px 0;
+    color: #fff;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    min-height: 25px;
+  }
+
   form {
     text-align: center;
   }
@@ -50,7 +66,7 @@ body {
   .btn {
     display: inline-block;
     padding: 20px;
-    background: $green;
+    background: $blue;
     font-weight: 300;
     cursor: pointer;
     color: #fff;

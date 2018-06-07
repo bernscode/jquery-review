@@ -1,19 +1,26 @@
 $(function(){
-
+  var pokemonSearch;
 
   $('.btn').on('click', function(){
+
+    pokemonSearch = $('.pokedex input[type="text"]').val()
+
     var request = $.ajax({
-      url: "https://pokeapi.co/api/v2/pokemon/pikachu/",
+      url: "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch,
       method: "GET",
       // data: {
       //   title: 'Top 5 Best Cities To Live',
-      //   body: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+      //   body: "",
       //   userId: 5
       // },
       // dataType: "html"
     });
 
     request.done(function( data ) {
+
+      $('.pokedex h3').text(data.name)
+
+      $('.poke-img img').attr('src', data.sprites.front_default)
       console.log(data)
     });
 
